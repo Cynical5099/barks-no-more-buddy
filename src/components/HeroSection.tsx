@@ -31,7 +31,7 @@ const HeroSection = () => {
             variant="cta" 
             size="hero"
             className="animate-pulse hover:animate-none"
-            onClick={() => window.open('https://uplevelrewarded.com/aff_c?offer_id=1907&aff_id=21664', '_blank')}
+            onClick={() => window.open('https://uplevelrewarded.com/aff_c?offer_id=1907&aff_id=21664&source=tiktok', '_blank')}
           >
             Apply 50% Discount & Check Availability
           </Button>
