@@ -40,51 +40,47 @@ const SocialProofSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-6">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">
+    <section className="py-12 sm:py-16 md:py-20 bg-background">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          {/* Heading */}
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 sm:mb-6 md:mb-8 text-foreground">
             Thousands of Happy Pet Owners
           </h2>
-          <p className="text-xl mb-16 text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl mb-8 sm:mb-12 text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             See the real transformations happening every day with Barks No More
           </p>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {/* Reviews Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-6 sm:mb-8 md:mb-12">
             {reviews.map((review, index) => (
-              <div key={index} className="bg-card rounded-2xl p-6 shadow-card hover:shadow-lg transition-all border">
-                <div className="flex items-center justify-center mb-4">
-                  {[...Array(review.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-warm-orange fill-current" />
-                  ))}
+              <div key={index} className="bg-card rounded-2xl p-4 sm:p-6 shadow-card hover:shadow-lg transition-all border flex flex-col justify-between h-full">
+                <div>
+                  <div className="flex items-center justify-center mb-2 sm:mb-4">
+                    {[...Array(review.rating)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 text-warm-orange fill-current" />
+                    ))}
+                  </div>
+
+                  <p className="text-sm sm:text-base md:text-lg text-card-foreground mb-4 sm:mb-6 leading-relaxed italic">
+                    "{review.text}"
+                  </p>
                 </div>
-                
-                <p className="text-lg text-card-foreground mb-6 leading-relaxed italic">
-                  "{review.text}"
-                </p>
-                
-                <div className="border-t pt-4">
-                  <p className="font-bold text-card-foreground">{review.name}</p>
-                  <p className="text-muted-foreground text-sm mb-2">{review.location}</p>
-                  <p className="text-primary font-medium text-sm">{review.petType} Owner</p>
+
+                <div className="border-t pt-3 sm:pt-4">
+                  <p className="font-bold text-card-foreground text-sm sm:text-base">{review.name}</p>
+                  <p className="text-muted-foreground text-xs sm:text-sm mb-1">{review.location}</p>
+                  <p className="text-primary font-medium text-xs sm:text-sm">{review.petType} Owner</p>
                 </div>
               </div>
             ))}
           </div>
           
-          <div className="bg-success-green/10 border border-success-green rounded-2xl p-8">
-            <h3 className="text-2xl font-bold mb-4 text-success-green">
+          {/* Summary Box */}
+          <div className="bg-success-green/10 border border-success-green rounded-2xl p-4 sm:p-6 md:p-8">
+            <h3 className="text-xl sm:text-2xl md:text-2xl font-bold mb-2 sm:mb-4 text-success-green">
               ✅ Join 36,400+ Satisfied Customers
             </h3>
-            <p className="text-lg text-foreground leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg text-foreground leading-relaxed">
               Our customers report an average of 87% improvement in their pet's behavior within the first week. 
               From aggressive barking to destructive chewing - Barks No More handles it all.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default SocialProofSection;
