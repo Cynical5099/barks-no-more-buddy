@@ -22,11 +22,17 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          hover: "hsl(var(--primary-hover))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
+          hover: "hsl(var(--secondary-hover))",
         },
+        "trust-blue": "hsl(var(--trust-blue))",
+        "success-green": "hsl(var(--success-green))",
+        "warm-orange": "hsl(var(--warm-orange))",
+        "soft-gray": "hsl(var(--soft-gray))",
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
@@ -62,6 +68,20 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      backgroundImage: {
+        "hero-gradient": "var(--hero-gradient)",
+        "section-gradient": "var(--section-gradient)",
+      },
+      boxShadow: {
+        soft: "var(--shadow-soft)",
+        button: "var(--shadow-button)",
+        card: "var(--shadow-card)",
+      },
+      fontSize: {
+        hero: "var(--font-hero)",
+        subhero: "var(--font-subhero)",
+        section: "var(--font-section)",
       },
       keyframes: {
         "accordion-down": {
