@@ -42,7 +42,7 @@ const FinalCTASection = () => {
             variant="secondary" 
             size="hero"
             className="bg-white text-primary hover:bg-white/90 shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300"
-            onClick={() => window.open('https://uplevelrewarded.com/aff_c?offer_id=1907&aff_id=21664', '_blank')}
+            onClick={() => window.open('https://uplevelrewarded.com/aff_c?offer_id=1907&aff_id=21664&source=tiktok', '_blank')}
           >
             Claim Discount & Train Your Pet Now
           </Button>
